@@ -21,10 +21,6 @@ class App extends Component {
       <div
         style={{
          background: this.state.background,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
           height: '100vh',
         }}
       >

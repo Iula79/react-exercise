@@ -15,6 +15,7 @@ import React from 'react';
 //         }, 1000);
 //     }; 
 // }
+
 const CountDownClock = () => /* your component JSX */ null;
 // 
 export default CountDownClock;

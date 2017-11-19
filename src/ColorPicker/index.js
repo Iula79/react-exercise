@@ -9,10 +9,10 @@ class Picker extends React.Component {
         let palettes = colors
         let updateBackgroundColor = this.props.updateBackgroundColor
         return(
-            <div style={{display:"inline"}}>
+            <div >
                 {palettes.map(function(x){
                     return(
-                    <div key={x} style={{width:"50px", height:"50px", background: x}} onClick={e => updateBackgroundColor(x)}></div>
+                    <div key={x} style={{ width:50, height:50, display:"inline-block", background: x}} onClick={e => updateBackgroundColor(x)}></div>
                     )
                 }, this)}
             </div>
