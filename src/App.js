@@ -3,20 +3,24 @@ import React, { Component } from 'react';
 import Clock from './Clock';
 import CountDownClock from './CountDownClock';
 import CountDownWordClock from './CountDownWordClock';
-import ColorPicker from './ColorPicker';
+import Picker from './ColorPicker';
 import GradientPicker from './GradientPicker';
 import CustomGradientPicker from './CustomGradientPicker';
 
 class App extends Component {
   state = {
-    background: 'steelblue',
+    background: 'cornflowerblue',
   };
+
+  changeColor = (color) => {
+    this.setState({ background: color })
+  }
 
   render() {
     return (
       <div
         style={{
-          background: this.state.background,
+         background: this.state.background,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -24,10 +28,10 @@ class App extends Component {
           height: '100vh',
         }}
       >
-        <Clock />
+        <Clock hours="1" minutes="23" seconds="45"/>
         <CountDownClock />
         <CountDownWordClock />
-        <ColorPicker />
+        <Picker updateBackgroundColor={this.changeColor}/>
         <GradientPicker />
         <CustomGradientPicker />
       </div>

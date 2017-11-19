@@ -3,7 +3,7 @@ import Clock from '../Clock/solution';
 
 export class CountDown extends React.Component {
   state = {
-    seconds: this.props.from,
+    seconds: this.props.from
   };
 
   componentDidMount() {
