@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Clock from './Clock';
-import CountDownClock from './CountDownClock';
+import CountDown from './CountDownClock';
 import CountDownWordClock from './CountDownWordClock';
 import Picker from './ColorPicker';
 import GradientPicker from './GradientPicker';
@@ -25,7 +25,7 @@ class App extends Component {
         }}
       >
         <Clock hours="1" minutes="23" seconds="45"/>
-        <CountDownClock />
+        <CountDown seconds="10"/>
         <CountDownWordClock />
         <Picker updateBackgroundColor={this.changeColor}/>
         <GradientPicker />

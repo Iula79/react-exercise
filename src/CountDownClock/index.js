@@ -1,24 +1,36 @@
 import React from 'react';
+import Clock from '../Clock/index.js'
 
-// export class CountDown extends React.Component {
-//     state = {
-//         seconds:this.props.from
-//     };
-//     componentDidMount() {
+class CountDown extends React.Component {
+    
+    state = {
+       
+        seconds:this.props.seconds,
 
-//         setInterval(function(){
-//             if (this.state.seconds <= 0){
-//             clearTimeout()
-//             } else { 
-//                 this.setState({seconds: this.state.seconds -1});
-//             }
-//         }, 1000);
-//     }; 
-// }
+    };
 
-const CountDownClock = () => /* your component JSX */ null;
-// 
-export default CountDownClock;
+    componentDidMount() {
+        
+        let IntervalId = setInterval(()=>{
+            if (this.state.seconds <= 0){
+                alert("done")
+            clearTimeout(IntervalId)
+            } else { 
+                this.setState({seconds: this.state.seconds -1});
+            }
+        }, 1000);
+
+    }; 
+
+    render(){
+        console.log(this.state.seconds)
+        return (
+            <Clock hours={Math.floor(this.state.seconds / 3600)} minutes={Math.floor((this.state.seconds % 3600) / 60)} seconds={Math.floor((this.state.seconds % 3600) % 60)}/>
+        )
+    }
+}
+
+export default CountDown;
 
 /** Done early?  Try adding these features:
  *
